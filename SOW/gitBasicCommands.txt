@@ -1,0 +1,6 @@
+git init
+git add fileName // directory/* for a folder
+git commit -m "message" 
+git remote add origin URL
+git pull origin branchName --alow-unrelated-histories
+git push origin brachName
