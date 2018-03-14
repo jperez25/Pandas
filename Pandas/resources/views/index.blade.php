@@ -12,26 +12,28 @@
         <!--Bootstrap -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
 
+        <style>
+            body{background-color: #fefff2}
+        </style>
+
  
     </head>
-    <body>    
-    @include('header')
+    <body> 
+        <!-- https://mdbootstrap.com/components/navbar/ -->   
+        @include('header')
 
-    <div class="container">
-        <!-- Main component for a primary marketing message or call to action -->
-        <div class="jumbotron">
-        <h1>Navbar example</h1>
-        <p>This example is a quick exercise to illustrate how the default, static navbar and fixed to top navbar work. It includes the responsive CSS and HTML, so it also adapts to your viewport and device.</p>
-        <p>
-            <a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button">View navbar docs &raquo;</a>
-        </p>
+        <div class="container">
+            <!-- Main component for a primary marketing message or call to action -->
+            <div class="jumbotron">
+                <h1>Navbar example</h1>
+                <img src="../images/banner.jpg" alt="banner" height="42" width="42">
+            </div>
+
+            <!-- Some images/links to menu, order online and sign in -->
+
         </div>
 
-        <!-- Some images/links to menu, order online and sign in -->
 
-    </div>
-
-
-    @include('footer')
+        @include('footer')
     </body>
 <html>

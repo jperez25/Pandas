@@ -88,7 +88,7 @@
     <div class="text-center py-3">
         <ul class="list-unstyled list-inline mb-0">
             <li class="list-inline-item">
-                <h5 class="mb-1">Register for free</h5>
+                <h5 class="mb-1">Order online</h5>
             </li>
             <li class="list-inline-item">
                 <a href="#!" class="btn btn-danger btn-rounded">Sign up!</a>
@@ -133,8 +133,10 @@
 
     <!--Copyright-->
     <div class="footer-copyright py-3 text-center">
-        © 2018 Copyright:
-        <a href="https://mdbootstrap.com/material-design-for-bootstrap/"> MDBootstrap.com </a>
+        © 2018 Copyright: 2016 www.luckypandaonline.com  All rights reserved.
+        <br/>
+        Site by
+        <a href="https://github.com/jperez25/Pandas"> Pandas project </a>
     </div>
     <!--/.Copyright-->
 
