@@ -36,7 +36,7 @@
         </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Sign in</a></li>
+        <li><a href="{{route('signin')}}">Sign in</a></li>
         <li><a href="#">Help</a></li>
       </ul>
     </div><!--/.nav-collapse -->
