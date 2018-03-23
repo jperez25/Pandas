@@ -7,6 +7,7 @@
         </div>
         <div class="col-sm-4">
             <div class="login-form">
+            
                 <form action="/examples/actions/confirmation.php" method="post">
                     <h2 class="text-center">Admin Log In</h2>       
                     <div class="form-group">

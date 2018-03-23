@@ -28,5 +28,9 @@ Route::get('/signin', function () {
 })->name('signin');
 
 Route::get('/admin', function () {
-    return view('admin');
+    return view('admin.admin');
 })->name('admin');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
