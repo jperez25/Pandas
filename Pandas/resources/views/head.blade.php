@@ -14,6 +14,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
         <!-- Styles local
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">-->
+        <link href="{{ asset('css/bootstrap-social.css') }}" rel="stylesheet">
         <!--favicon 
         <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.png" /> -->
 

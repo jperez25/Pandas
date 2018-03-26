@@ -4,6 +4,7 @@
     <body> 
         <!-- https://mdbootstrap.com/components/navbar/ -->   
         @include('header')
+        <!-- /navBar --> 
 
         <div class="container">
             <!-- Main component for a primary marketing message or call to action -->
@@ -19,10 +20,11 @@
                     <img class="col-md-3" alt="Order">
                     <img class="col-md-3" alt="Promotions">
             </div>
-
+            <a type="button" class="btn-floating btn-lg btn-fb"><i class="fa fa-facebook"></i></a>
         </div>
 
-
+        <!--Footer-->
         @include('footer')
+        <!--/Footer-->
     </body>
 <html>

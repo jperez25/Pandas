@@ -57,7 +57,7 @@
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('Card Number') }}</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="number" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="cardNumber" value="{{ old('email') }}" required>
+                                <input id="email" type="number" class="form-control" name="cardNumber" value="{{ old('cardNumber') }}" required>
 
                                 @if ($errors->has('cardNumber'))
                                     <span class="invalid-feedback">
