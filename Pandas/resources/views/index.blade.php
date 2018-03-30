@@ -16,11 +16,10 @@
             <!-- Some images/links to menu, order online and sign in -->
             <div class="row">
                     <span class="col-md-2"></span>
-                    <img class="col-md-3" alt="Menu">                    
+                    <img class="col-md-3" alt="Menu" <span></span>>                    
                     <img class="col-md-3" alt="Order">
                     <img class="col-md-3" alt="Promotions">
             </div>
-            <a type="button" class="btn-floating btn-lg btn-fb"><i class="fa fa-facebook"></i></a>
         </div>
 
         <!--Footer-->

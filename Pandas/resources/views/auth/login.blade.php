@@ -11,7 +11,7 @@
                 <h2 class="text-center">{{ __('Login') }}</h2>
 
                 <div class="form-group">
-                    <input type="email" class="form-control" placeholder="Email Address" required="required">
+                    <input type="email" class="form-control" name="email" placeholder="Email Address" required="required">
                     @if ($errors->has('email'))
                         <span class="invalid-feedback alert-danger">
                             <strong>Invalid email or password</strong>
@@ -20,7 +20,7 @@
                 </div>
 
                 <div class="form-group">
-                    <input type="password" class="form-control" placeholder="Password" required="required">
+                    <input type="password" class="form-control" name="password" placeholder="Password" required="required">
                     @if ($errors->has('password'))
                         <span class="invalid-feedback alert-danger  ">
                             <strong >Invalid email or password</strong>

@@ -8,13 +8,14 @@
         <div class="col-sm-4">
             <div class="login-form">
             
-                <form action="/examples/actions/confirmation.php" method="post">
+                <form action="{{route('admin')}}" method="get">
+                    @csrf
                     <h2 class="text-center">Admin Log In</h2>       
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Username" required="required">
+                        <input type="email" class="form-control" name='email' placeholder="Email" required="required">
                     </div>
                     <div class="form-group">
-                        <input type="password" class="form-control" placeholder="Password" required="required">
+                        <input type="password" class="form-control" name='password' placeholder="Password" required="required">
                     </div>
                     <div class="form-group">
                         <button type="submit" class="btn btn-primary btn-block">Log in</button>
