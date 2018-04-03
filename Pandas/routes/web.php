@@ -33,9 +33,9 @@ Route::get('/signin', function () {
     return view('signin');
 })->name('signin');
 
-Route::get('/admin', 'Auth\AdminLoginController@admin');
+//Route::get('/admin', 'Auth\AdminLoginController@admin');
 
-Route::get('/admin', 'Auth\AdminLoginController@val')->name('admin');
+Route::get('/admin', 'Auth\AdminLoginController@admin')->name('admin');
 
 Auth::routes();
 

@@ -51,7 +51,7 @@ class AdminLoginController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [            
-            'email' => 'required|email|max:255|unique:users',
+            'userId' => 'required|max:255|unique:users',
             'password' => 'required|min:8|confirmed',
         ]);
     }
@@ -64,9 +64,9 @@ class AdminLoginController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
-            'email' => $data['email'],
-            'password' => bcrypt($data['password']),
+        return Admin::create([
+            'userId' => $data['userId'],
+            'password' => $data['password'],
         ]);
     }
 }

@@ -28,6 +28,8 @@
                     @endif
                 </div>
 
+                @include('layouts.errors')
+                
                 <div class="form-group">
                     <button type="submit" class="btn btn-primary btn-block">{{ __('Login') }}</button>
                 </div>
