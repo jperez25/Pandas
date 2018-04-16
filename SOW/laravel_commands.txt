@@ -3,3 +3,6 @@ php artisan serve
 php artisan migrate
 php artisan make:model Name -mc-r //model controller resources
 php artisan make:auth //for user authentication
+php artisan make:migration Name
+php artisan make:refresh
+php artisan make:reset
