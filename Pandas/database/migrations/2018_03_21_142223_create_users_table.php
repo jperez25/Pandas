@@ -20,6 +20,7 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->string('phoneNumber')->unique();
             $table->rememberToken();
+            $table->string("level")->default('1');
             $table->string('cardNumber');
             $table->timestamps();
         });

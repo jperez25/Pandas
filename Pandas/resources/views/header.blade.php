@@ -47,6 +47,14 @@
                                 </a>
                             </li>
 
+                            @if(Auth::user()->isAdmin())
+                            <li>
+                                <a class="dropdown-item" href="{{route('admin')}}">
+                                        {{ __('Admin') }}
+                                </a>
+                            </li>
+                            @endif
+
                             <li>
                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                         onclick="event.preventDefault();

@@ -1,38 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ app()->getLocale() }}">
 @include('head')
 <body>
-<div class="container">
-        <div class="col-sm-4">
-        </div>
-        <div class="col-sm-4">
-            <div class="login-form">
-            
-                <form action="{{route('admin')}}" method="get">
-                    @csrf
-                    <h2 class="text-center">Admin Log In</h2>       
-                    <div class="form-group">
-                        <input type="text" class="form-control" name='userId' placeholder="User Id" required="required">
-                    </div>
-                    <div class="form-group">
-                        <input type="password" class="form-control" name='password' placeholder="Password" required="required">
-                    </div>
-                    @include('layouts.errors')
-                    <div class="form-group">
-                        <button type="submit" class="btn btn-primary btn-block">Log in</button>
-                    </div>
-                    <div class="clearfix">
-                        <div class='row'>
-                            <a href="#" class="pull-right">Forgot Password?</a>
-                            <a href="#" class="pull-left">Forgot user Id?</a>
-                        </div>
-                        <div class = 'row'>
-                            <label class="pull-left checkbox-inline"><input type="checkbox"> Remember me</label>
-                        </div>
-                    </div>        
-                </form>
-            </div>
+    @include('admin.navbar')
+
+    <div id="wrapper">
+        @include('admin.sidebar')
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <h1>Welcome back {{Auth::user()->name}}!</h1>
+                <p>This template has a responsive menu toggling system. The menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will appear/disappear. On small screens, the page content will be pushed off canvas.</p>
+                <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>
+
+                <div id='results'>
+                        @yield('content')                    
+                </div>
+
             </div>
         </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+
+    <!-- Scripts -->
+    @include('admin.scripts')
 </body>
 </html>

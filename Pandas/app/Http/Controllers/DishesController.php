@@ -7,6 +7,12 @@ use Illuminate\Http\Request;
 
 class DishesController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth')->except('logout');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -14,8 +20,13 @@ class DishesController extends Controller
      */
     public function index()
     {
-        $dishes = dishes::all();
-        return response()->json(array('dishes'=> $dishes), 200);
+        if(auth()->user()->isAdmin()) {
+            $dishes = dishes::all();
+            return response()->json(array('dishes'=> $dishes), 200);
+        }
+        else{
+            redirect()->route('/');
+        }
     }
 
     /**

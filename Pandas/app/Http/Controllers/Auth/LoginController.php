@@ -37,6 +37,18 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 
+    protected function userOrAdmin()
+    {
+        //admin
+        if(auth()->user()->isAdmin()) {
+            return view('menu');
+        }
+        //user
+        else{
+            return view('home');
+        }
+    }
+
     protected function validator(array $data)
     {
         return Validator::make($data, [            

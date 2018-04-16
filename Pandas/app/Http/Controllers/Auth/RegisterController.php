@@ -71,6 +71,7 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
             'phoneNumber'=> $data['phoneNumber'],
+            'level'=>User::DEFAULT_TYPE,
             'cardNumber'=>$data['cardNumber'],
             'created_at'=>Carbon::now(),
 

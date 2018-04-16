@@ -18,6 +18,7 @@
         <!-- Styles local
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">-->
         <link href="{{ asset('css/bootstrap-social.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/adminSideBar.css') }}" rel="stylesheet">
         <!--favicon 
         <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.png" /> -->
 
