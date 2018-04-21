@@ -1,11 +1,7 @@
-<!DOCTYPE html>
-<html lang="{{ app()->getLocale() }}">
-@include('head')
-<body>
-    @include('header')
-    <div class='container'>
-        <!-- carousel with images of the place --> 
-        <div class='col-sm-9'>
+@extends('layouts.app')
+
+@section('content')
+<div class='col-sm-9'>
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
             <!-- Indicators -->
             <ol class="carousel-indicators">
@@ -40,6 +36,7 @@
             </a>
             </div>
         </div>
+
         
         <!-- history of the place and vision --> 
         <div class='col-sm-3'>
@@ -49,8 +46,17 @@
 
         </div>
     </div>
-    
 
-    @include('footer')
-</body>
-</html>
+@endsection
+
+@section('scripts')    
+    <script>
+        $('#myCarousel').carousel(
+            {
+                interval: 2000,
+                cycle: true,
+            }
+        )
+    </script>
+
+@endsection

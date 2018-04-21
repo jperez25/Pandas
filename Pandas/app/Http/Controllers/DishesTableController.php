@@ -30,12 +30,14 @@ class DishesTableController extends Controller
         $type = $request->dishType[0];
         $ingredients = $request->input('ingredients');        
         $price = $request->input('price');
+        $image = $request->input('image');
 
         DB::table('dishes')->insertGetId(
             ['name' => $name,
              'type' => $type,
              'ingredients' => $ingredients,
              'price' => $price,
+             'imageUrl' => $image,
              'created_at' => Carbon::now(),
              'updated_at'=>Carbon::now()
 
@@ -67,12 +69,14 @@ class DishesTableController extends Controller
         $name = $request->input('dishName'); 
         $type = $request->dishType[0]; 
         $ingre = $request->input('ingredients'); 
-        $price = $request->input('price');         
+        $price = $request->input('price');      
+        $image = $request->input('image');   
         //dd($request);  
         DB::table('dishes')->where('id', $id)->update(['name'=> $name,
                                                        'type'=> $type,
                                                        'ingredients'=> $ingre,                                                                                  
                                                        'price'=> $price,
+                                                       'imageUrl' => $image,
                                                        'updated_at'=>Carbon::now()]);
         return redirect('/dishes');
         //echo "<script>window.location.replace('".route('admin')."'); </script>";

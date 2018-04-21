@@ -54,7 +54,6 @@ class RegisterController extends Controller
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:8|confirmed',
             'phoneNumber' => 'required|string|min:10|',
-            'cardNumber' => 'required|string|min:12|',
         ]);
     }
 
@@ -71,8 +70,7 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
             'phoneNumber'=> $data['phoneNumber'],
-            'level'=>User::DEFAULT_TYPE,
-            'cardNumber'=>$data['cardNumber'],
+            'level'=>User::DEFAULT_TYPE,            
             'created_at'=>Carbon::now(),
 
         ]);

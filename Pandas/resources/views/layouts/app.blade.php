@@ -5,13 +5,11 @@
     <div id="app">
         @include('header')
 
-        <main class="py-4">
+        <div class="container">
             @yield('content')
-        </main>
+        </div>
         @include('footer')
     </div>
-
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}"></script>
 </body>
+@yield("scripts")
 </html>

@@ -29,6 +29,16 @@
                     </div>
                     <br/>
                 </div>
+
+                <div class='row'>
+                    <div class='col-sm-3'>
+                        <label>Status:</label>
+                    </div>
+                    <div class='col-sm-3'>
+                        <input id="status" type="text" align='right' name='status' required>
+                    </div>
+                    <br/>
+                </div>
                 
                 <div class='row'>
                     <div class='col-sm-3'>

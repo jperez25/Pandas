@@ -21,6 +21,12 @@
                                                 document.getElementById('users-form').submit();">Users</a>
                     {{Form::close()}}
                 </li>
+                <li>
+                {{ Form::open(array('action' => array('PromotionsTableController@index'), 'method' => 'get', 'id'=>'promotions-form')) }}
+                        <a id='users' onclick="event.preventDefault();
+                                                document.getElementById('promotions-form').submit();">Promotions</a>
+                    {{Form::close()}}
+                </li>
             </ul>
         </div>
         <!-- /#sidebar-wrapper -->

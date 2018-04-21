@@ -10,7 +10,7 @@ class DishesController extends Controller
 
     public function __construct()
     {
-        $this->middleware('auth')->except('logout');
+        $this->middleware('auth')->except('show');
     }
 
     /**
@@ -25,7 +25,7 @@ class DishesController extends Controller
             return response()->json(array('dishes'=> $dishes), 200);
         }
         else{
-            redirect()->route('/');
+            return redirect()->route('index');
         }
     }
 
@@ -58,7 +58,9 @@ class DishesController extends Controller
      */
     public function show(dishes $dishes)
     {
-        //
+        
+            $dishes = dishes::all();
+            return response()->json(array('dishes'=> $dishes), 200);
     }
 
     /**

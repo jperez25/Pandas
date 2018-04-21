@@ -34,7 +34,7 @@
         
         <div class='col-sm-3'>
         
-        {{Form::open(array('action' => array('DishesTableController@delete', $dish->id), 'method' => 'delete', 'onsubmit' => 'return confirm("Are you sure?")', 'id'=>'delete'))}}
+        {{Form::open(array('action' => array('DishesTableController@delete', $dish->id), 'method' => 'delete', 'onsubmit' => 'return confirm("Are you sure?")'))}}
          
             <button class='btn btn-danger'> <span class="glyphicon glyphicon-trash" aria-hidden="true" onclick=hide></span> Delete</button>
         {{Form::close()}}

@@ -5,11 +5,13 @@
     <!--social buttons-->
     <div class='container text-center'>
 
-        <a class="btn btn-social-icon btn-twitter" href="#">
+        <a class="btn btn-social-icon btn-twitter" 
+                        href="https://twitter.com/PandaExpress?lang=en">
             <span class="fa fa-twitter">t</span>
         </a>
-        <a class="btn btn-social-icon btn-facebook" href="#">
-            <span class="fa fa-twitter">f</span>
+        <a class="btn btn-social-icon btn-facebook" 
+                        href="https://www.facebook.com/pages/Panda-Express/121295237884401">
+            <span class="fa fa-facebook">f</span>
         </a>
 
         <a class="btn btn-social-icon btn-snapchat" href="#">
