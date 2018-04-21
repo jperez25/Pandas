@@ -1,7 +1,3 @@
-<div class="logo">
-    
-    <h1>{{ config('app.name', 'Lucky Panda') }}</h1>
-</div>
 <div class="container">
 
 <!-- Static navbar -->
@@ -14,7 +10,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="{{route('index')}}">{{ config('app.name', 'Lucky Panda') }}</a>
+      <a class="navbar-brand" href="{{route('index')}}"><img src="images/logo.jpg" alt="{{ config('app.name', 'Lucky Panda') }}"></a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">

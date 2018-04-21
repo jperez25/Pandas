@@ -95,3 +95,17 @@ Route::post('/edit-promo/{id}','PromotionsTableController@edit')->middleware('is
 Route::patch('/update-promo/{id}','PromotionsTableController@update')->middleware('is_admin');
 
 Route::delete('/delete-promo/{id}','PromotionsTableController@delete')->middleware('is_admin');
+
+//CRUD  for promotions
+
+Route::get('/users', 'UserTableController@index')->middleware('is_admin');
+
+Route::get('/add-user', 'UserTableController@add')->middleware('is_admin');
+
+Route::post('/insert-user','UserTableController@insert')->middleware('is_admin');
+
+Route::post('/edit-user/{id}','UserTableController@edit')->middleware('is_admin');
+
+Route::patch('/update-user/{id}','UserTableController@update')->middleware('is_admin');
+
+Route::delete('/delete-user/{id}','UserTableController@delete')->middleware('is_admin');

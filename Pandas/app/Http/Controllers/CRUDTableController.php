@@ -154,12 +154,14 @@ class CRUDTableController extends Controller
         $priceRemovedDish = $d->price;
 
         //removing requested dish
-        foreach($dishesIds as $id){
+       /* foreach($dishesIds as $id){
             if ($id == $request->dish) {
+                array_search($request->dish, );
                 unset($dishesIds[$request->dish]);
                 break;
             }
-        }
+        }*/
+        unset($dishesIds[array_search($request->dish, $dishesIds)]);
 
         $dish = "";
         $size = sizeof($dishesIds);
