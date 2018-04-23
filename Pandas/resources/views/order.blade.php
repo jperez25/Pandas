@@ -1,7 +1,7 @@
-@extends('layouts.app')
+@extends("layouts.app")
+
 
 @section('content')
-
 <div class='contanier text-center'>
     <div class="row btn-toolbar">
         <div class="col-sm-1"></div>
@@ -43,8 +43,11 @@
 
 </div>
 
+
 @endsection
 
+
+@section('scripts')
 <script>
     function showDish(str) { 
             $("#displayDishes").html("");
@@ -78,7 +81,12 @@
                                     "<div class='panel panel-primary'>"+
                                     "<div class='panel-heading'>"+value.name+"</div>"+
                                     "<div class='panel-body'><img src='"+value.imageUrl+"' class='img-responsive' style='width:100%' alt='Image'></div>"+
-                                    "<div class='panel-footer'>"+value.ingredients+"</div>"+
+                                    "<div class='panel-footer'>"+
+                                                "<span>$"+value.price+"</span>\n</br>"+
+                                                "<span>"+value.ingredients+"</span>"+                                    
+                                                "<div> <button type='button' class='btn btn-success' onclick='createOrder("+value.id+")'>Add to cart</button>"+
+                                    "</div>"+
+
                                 "</div>"
                                 );
                             }
@@ -102,4 +110,23 @@
                }
             });
          }
+
+    function createOrder(id){
+        $.ajax({
+            type: "POST",
+            url: '/createOrder',
+            data: { customer: '{{Auth::user()->name}}', dish: id, _token: '{{csrf_token()}}' },
+            success: function (data) {
+                alert("Item added to cart");
+                console.log(data);
+            },
+            error: function (data) {
+                alert(data);
+                console.log(data);
+
+            },
+        });
+    }
 </script>
+
+@endsection

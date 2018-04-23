@@ -55,19 +55,15 @@
                         </div>
 
                     </div>
-                    <div class="form-group">
-                        <label>Upload Image</label>
-                        <div class="input-group">
-                            <span class="input-group-btn">
-                                <span class="btn btn-default btn-file">
-                                    Browse… 
-                                    <input type="file" id="imgInp">
-                                </span>
-                            </span>
-                            <input type="text" class="form-control" readonly>
+                    <div class='row'>
+                        <div class='col-sm-2'>
+                            <label>Url To Image:</label>
                         </div>
-                        <img id='img-upload'/ width="100px" height="100px" hidden>
-                    </div>                
+                        <div class='col-sm-3'>
+                            <input size=50 id="image" type="text" align='right' name='image' required>
+                        </div>
+                        <br/>
+                    </div>               
                 </div>
 
                 

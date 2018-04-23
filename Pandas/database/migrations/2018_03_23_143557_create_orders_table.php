@@ -17,6 +17,7 @@ class CreateOrdersTable extends Migration
             $table->increments('id');
             $table->string('customer');
             $table->string('dishes');
+            $table->string("status");
             $table->string('total');
             $table->timestamps();
         });

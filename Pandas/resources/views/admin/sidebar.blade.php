@@ -16,9 +16,15 @@
                     <a id='orders' onclick="displayCRUD(this.id)">Orders</a>
                 </li>
                 <li>
-                {{ Form::open(array('action' => array('DishesTableController@index'), 'method' => 'get', 'id'=>'users-form')) }}
+                    {{ Form::open(array('action' => array('UserTableController@index'), 'method' => 'get', 'id'=>'users-form')) }}
                         <a id='users' onclick="event.preventDefault();
                                                 document.getElementById('users-form').submit();">Users</a>
+                    {{Form::close()}}
+                </li>
+                <li>
+                    {{ Form::open(array('action' => array('PromotionsTableController@index'), 'method' => 'get', 'id'=>'promotions-form')) }}
+                        <a id='users' onclick="event.preventDefault();
+                                                document.getElementById('promotions-form').submit();">Promotions</a>
                     {{Form::close()}}
                 </li>
             </ul>

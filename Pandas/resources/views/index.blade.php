@@ -42,7 +42,7 @@
                                 <img class="card-img-top" src="images/eggRolls.jpg" width="200" height="181" alt="promotions">
                             </a>
                             <div class="card-body">
-                                <a href="{{route('menu')}}" class="btn btn-primary">Promotions</a>
+                                <a href="{{route('promotions')}}" class="btn btn-primary">Promotions</a>
                             </div>
                         </div>
                     </div>

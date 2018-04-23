@@ -19,6 +19,7 @@ class CreateDishesTable extends Migration
             $table->string("name");
             $table->string("ingredients");
             $table->string("price");
+            $table->string("imageUrl");
             $table->timestamps();
         });
     }

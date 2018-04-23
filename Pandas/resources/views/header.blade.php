@@ -1,7 +1,3 @@
-<div class="logo">
-    
-    <h1>{{ config('app.name', 'Lucky Panda') }}</h1>
-</div>
 <div class="container">
 
 <!-- Static navbar -->
@@ -14,7 +10,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="{{route('index')}}">{{ config('app.name', 'Lucky Panda') }}</a>
+      <a class="navbar-brand" href="{{route('index')}}"><img src="images/logo.jpg" alt="{{ config('app.name', 'Lucky Panda') }}"></a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
@@ -22,7 +18,7 @@
         <li><a href="{{route('menu')}}">Menu</a></li>
         <li><a href="{{route('about')}}">About</a></li>      
         <li><a href="{{route('contact')}}">Contact</a></li>
-        <li><a href="#">Order</a></li>
+        <li><a href="{{route('order')}}">Order</a></li>
         
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -63,13 +59,17 @@
                                 </a>
                             </li>
 
+
                     </ul>
+                    
 
                       <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                           @csrf
                       </form>
+                    
                   </div>
               </li>
+              <li><a href="{{route('cart')}}"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
           @endguest
       </ul>
     </div><!--/.nav-collapse -->
