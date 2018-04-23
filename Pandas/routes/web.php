@@ -69,4 +69,6 @@ Route::patch('/update-dish/{id}','DishesTableController@update')->middleware('is
 
 Route::delete('/delete-dish/{id}','DishesTableController@delete')->middleware('is_admin');
 
+//CRUD for UI
 
+Route::resource('crud', 'CRUDController');
